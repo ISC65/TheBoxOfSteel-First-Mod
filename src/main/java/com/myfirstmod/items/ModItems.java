@@ -4,6 +4,6 @@ import com.myfirstmod.SomeTutorialMod;
 
 public class ModItems {
     public static void registerModItems() {
-        SomeTutorialMod.LOGGER.info("New Item Added");
+        SomeTutorialMod.LOGGER.info("Registering Items for " + SomeTutorialMod.MOD_ID);
     }
 }
