@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "some-tutorial-mod",
+	"version": "${version}",
+	"name": "Some Tutorial Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"TheBoxOfSteel"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/some-tutorial-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.myfirstmod.SomeTutorialMod"
+		],
+		"fabric-datagen": [
+			"com.myfirstmod.SomeTutorialModDataGenerator"
+		],
+
+		"client": [
+			"com.myfirstmod.SomeTutorialModClient"
+		]
+	},
+	"mixins": [
+		"some-tutorial-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
