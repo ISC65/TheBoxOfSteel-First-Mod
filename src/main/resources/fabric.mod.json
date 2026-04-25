@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "some-tutorial-mod",
+	"id": "nonsense",
 	"version": "${version}",
-	"name": "Some Tutorial Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "nonsense",
+	"description": "absolute CACA",
 	"authors": [
 		"TheBoxOfSteel"
 	],
@@ -11,27 +11,30 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "MIT",
-	"icon": "assets/some-tutorial-mod/icon.png",
+	"license": "CC0-1.0",
+	"icon": "assets/nonsense/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.myfirstmod.SomeTutorialMod"
+			"tbos.nonsense.Nonsense"
+		],
+		"client": [
+			"tbos.nonsense.client.NonsenseClient"
 		],
 		"fabric-datagen": [
-			"com.myfirstmod.SomeTutorialModDataGenerator"
-		],
-
-		"client": [
-			"com.myfirstmod.SomeTutorialModClient"
+			"tbos.nonsense.client.NonsenseDataGenerator"
 		]
 	},
 	"mixins": [
-		"some-tutorial-mod.mixins.json"
+		"nonsense.mixins.json",
+		{
+			"config": "nonsense.client.mixins.json",
+			"environment": "client"
+		}
 	],
 	"depends": {
-		"fabricloader": ">=0.18.4",
-		"minecraft": "~1.21.8",
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
 		"java": ">=21",
 		"fabric-api": "*"
 	}
